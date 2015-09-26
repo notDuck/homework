@@ -14,7 +14,7 @@
         </value>
         <next>
           <block type="oled_drawtext" id="69">
-            <field name="TEXT">hi</field>
+            <field name="TEXT">(^_^)</field>
           </block>
         </next>
       </block>
