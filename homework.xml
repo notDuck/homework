@@ -8,6 +8,7 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="1223" inline="false">
+        <mutation else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="1270" inline="true">
             <field name="OP">LT</field>
@@ -32,16 +33,16 @@
               </block>
             </value>
             <next>
-              <block type="robot_delay" id="1519" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="1520">
-                    <field name="NUM">100</field>
-                  </block>
-                </value>
+              <block type="movement_right" id="1456">
                 <next>
-                  <block type="movement_left" id="1476">
+                  <block type="robot_delay" id="1531" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="1532">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="movement_reverse" id="1493"></block>
+                      <block type="movement_stop" id="1533"></block>
                     </next>
                   </block>
                 </next>
@@ -49,8 +50,25 @@
             </next>
           </block>
         </statement>
+        <statement name="ELSE">
+          <block type="movement_forward" id="1432">
+            <next>
+              <block type="robot_delay" id="1537" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="1538">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_stop" id="1534"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
         <next>
           <block type="controls_if" id="1457" inline="false">
+            <mutation else="1"></mutation>
             <value name="IF0">
               <block type="logic_compare" id="1458" inline="true">
                 <field name="OP">LT</field>
@@ -75,16 +93,16 @@
                   </block>
                 </value>
                 <next>
-                  <block type="robot_delay" id="1521" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="1522">
-                        <field name="NUM">100</field>
-                      </block>
-                    </value>
+                  <block type="movement_left" id="1476">
                     <next>
-                      <block type="movement_right" id="1456">
+                      <block type="robot_delay" id="1521" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="1522">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="movement_reverse" id="1503"></block>
+                          <block type="movement_stop" id="1535"></block>
                         </next>
                       </block>
                     </next>
@@ -92,22 +110,22 @@
                 </next>
               </block>
             </statement>
-            <next>
-              <block type="movement_forward" id="1432">
+            <statement name="ELSE">
+              <block type="movement_forward" id="1536">
                 <next>
-                  <block type="robot_delay" id="1443" inline="true">
+                  <block type="robot_delay" id="1539" inline="true">
                     <value name="DELAY">
-                      <block type="math_number" id="1444">
+                      <block type="math_number" id="1540">
                         <field name="NUM">200</field>
                       </block>
                     </value>
                     <next>
-                      <block type="movement_stop" id="1445"></block>
+                      <block type="movement_stop" id="1541"></block>
                     </next>
                   </block>
                 </next>
               </block>
-            </next>
+            </statement>
           </block>
         </next>
       </block>
