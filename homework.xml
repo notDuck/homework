@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1216" inline="false" x="-56" y="8">
+  <block type="controls_whileUntil" id="1216" inline="false" x="-147" y="-40">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="1254">
@@ -32,14 +32,14 @@
               </block>
             </value>
             <next>
-              <block type="movement_reverse" id="1353">
+              <block type="robot_delay" id="1382" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="1383">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="1382" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="1383">
-                        <field name="NUM">200</field>
-                      </block>
-                    </value>
+                  <block type="movement_right" id="1456">
                     <next>
                       <block type="movement_stop" id="1421"></block>
                     </next>
@@ -50,16 +50,61 @@
           </block>
         </statement>
         <next>
-          <block type="movement_forward" id="1432">
-            <next>
-              <block type="robot_delay" id="1443" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="1444">
-                    <field name="NUM">200</field>
+          <block type="controls_if" id="1457" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" id="1458" inline="true">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="sensor_object" id="1459">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="1460">
+                    <field name="NUM">75</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="led_select" id="1461" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="1462">
+                    <field name="NUM">5</field>
                   </block>
                 </value>
                 <next>
-                  <block type="movement_stop" id="1445"></block>
+                  <block type="robot_delay" id="1463" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="1464">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="movement_left" id="1476">
+                        <next>
+                          <block type="movement_stop" id="1466"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="movement_forward" id="1432">
+                <next>
+                  <block type="robot_delay" id="1443" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="1444">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="movement_stop" id="1445"></block>
+                    </next>
+                  </block>
                 </next>
               </block>
             </next>
