@@ -20,21 +20,4 @@
       </block>
     </next>
   </block>
-  <block type="oled_drawnumber" id="79" inline="true" x="341" y="333">
-    <value name="NUMBER">
-      <block type="math_arithmetic" id="89" inline="true">
-        <field name="OP">ADD</field>
-        <value name="A">
-          <block type="math_number" id="90">
-            <field name="NUM">4</field>
-          </block>
-        </value>
-        <value name="B">
-          <block type="math_number" id="91">
-            <field name="NUM">5</field>
-          </block>
-        </value>
-      </block>
-    </value>
-  </block>
 </xml>
