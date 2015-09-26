@@ -16,17 +16,8 @@
           <block type="oled_drawtext" id="69">
             <field name="TEXT">(^_^)</field>
             <next>
-              <block type="robot_delay" id="123" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="131">
-                    <field name="NUM">4000</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="oled_drawtext" id="194">
-                    <field name="TEXT">just horsing around</field>
-                  </block>
-                </next>
+              <block type="oled_drawtext" id="194">
+                <field name="TEXT">just horsing around</field>
               </block>
             </next>
           </block>
