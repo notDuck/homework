@@ -1,73 +1,63 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="714" inline="false" x="-46" y="-51">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="768">
-        <field name="OBJECT">ENTER</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="oled_cleardisplay" id="801">
+  <block type="oled_cleardisplay" id="801" x="164" y="22">
+    <next>
+      <block type="oled_setcursor" id="810" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="817">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="math_number" id="818">
+            <field name="NUM">10</field>
+          </block>
+        </value>
         <next>
-          <block type="oled_setcursor" id="810" inline="true">
-            <value name="STARTX">
-              <block type="math_number" id="817">
-                <field name="NUM">10</field>
-              </block>
-            </value>
-            <value name="STARTY">
-              <block type="math_number" id="818">
-                <field name="NUM">10</field>
-              </block>
-            </value>
+          <block type="oled_drawtext" id="839">
+            <field name="TEXT">leftfront=</field>
             <next>
-              <block type="oled_drawtext" id="839">
-                <field name="TEXT">leftfront=</field>
+              <block type="oled_drawnumber" id="861" inline="true">
+                <value name="NUMBER">
+                  <block type="sensor_object" id="992">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="oled_drawnumber" id="861" inline="true">
-                    <value name="NUMBER">
-                      <block type="sensor_object" id="992">
-                        <field name="OBJECT">LEFTFRONT</field>
+                  <block type="robot_delay" id="924" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="999">
+                        <field name="NUM">200</field>
                       </block>
                     </value>
                     <next>
-                      <block type="robot_delay" id="924" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="999">
-                            <field name="NUM">200</field>
+                      <block type="oled_setcursor" id="1000" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="1001">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="1002">
+                            <field name="NUM">20</field>
                           </block>
                         </value>
                         <next>
-                          <block type="oled_setcursor" id="1000" inline="true">
-                            <value name="STARTX">
-                              <block type="math_number" id="1001">
-                                <field name="NUM">10</field>
-                              </block>
-                            </value>
-                            <value name="STARTY">
-                              <block type="math_number" id="1002">
-                                <field name="NUM">20</field>
-                              </block>
-                            </value>
+                          <block type="oled_drawtext" id="1003">
+                            <field name="TEXT">rightfront=</field>
                             <next>
-                              <block type="oled_drawtext" id="1003">
-                                <field name="TEXT">rightfront=</field>
+                              <block type="oled_drawnumber" id="1004" inline="true">
+                                <value name="NUMBER">
+                                  <block type="sensor_object" id="1005">
+                                    <field name="OBJECT">RIGHTFRONT</field>
+                                  </block>
+                                </value>
                                 <next>
-                                  <block type="oled_drawnumber" id="1004" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="sensor_object" id="1005">
-                                        <field name="OBJECT">RIGHTFRONT</field>
+                                  <block type="robot_delay" id="1006" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="1007">
+                                        <field name="NUM">200</field>
                                       </block>
                                     </value>
-                                    <next>
-                                      <block type="robot_delay" id="1006" inline="true">
-                                        <value name="DELAY">
-                                          <block type="math_number" id="1007">
-                                            <field name="NUM">200</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -83,6 +73,6 @@
           </block>
         </next>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
