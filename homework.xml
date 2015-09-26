@@ -38,17 +38,26 @@
                           </block>
                         </value>
                         <next>
-                          <block type="oled_setcursor" id="1000" inline="true">
-                            <value name="STARTX">
-                              <block type="math_number" id="1001">
-                                <field name="NUM">10</field>
+                          <block type="controls_repeat" id="1094" inline="true">
+                            <value name="TIMES">
+                              <block type="math_number" id="1113">
+                                <field name="NUM">1</field>
                               </block>
                             </value>
-                            <value name="STARTY">
-                              <block type="math_number" id="1002">
-                                <field name="NUM">20</field>
+                            <statement name="DO">
+                              <block type="oled_setcursor" id="1000" inline="true">
+                                <value name="STARTX">
+                                  <block type="math_number" id="1001">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="math_number" id="1002">
+                                    <field name="NUM">20</field>
+                                  </block>
+                                </value>
                               </block>
-                            </value>
+                            </statement>
                             <next>
                               <block type="oled_drawtext" id="1003">
                                 <field name="TEXT">rightfront=</field>
