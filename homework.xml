@@ -36,7 +36,7 @@
                         </value>
                         <value name="B">
                           <block type="math_number" id="1290">
-                            <field name="NUM">78</field>
+                            <field name="NUM">76</field>
                           </block>
                         </value>
                       </block>
@@ -70,7 +70,7 @@
                             </value>
                             <value name="B">
                               <block type="math_number" id="1460">
-                                <field name="NUM">78</field>
+                                <field name="NUM">76</field>
                               </block>
                             </value>
                           </block>
@@ -91,78 +91,6 @@
                         <statement name="ELSE">
                           <block type="movement_forward" id="1536"></block>
                         </statement>
-                        <next>
-                          <block type="controls_if" id="1542" inline="false">
-                            <mutation else="1"></mutation>
-                            <value name="IF0">
-                              <block type="logic_operation" id="1583" inline="true">
-                                <field name="OP">LAND</field>
-                                <value name="A">
-                                  <block type="logic_compare" id="1543" inline="true">
-                                    <field name="OP">LT</field>
-                                    <value name="A">
-                                      <block type="sensor_object" id="1544">
-                                        <field name="OBJECT">LEFTFRONT</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <block type="math_number" id="1545">
-                                        <field name="NUM">75</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="logic_compare" id="1584" inline="true">
-                                    <field name="OP">LT</field>
-                                    <value name="A">
-                                      <block type="sensor_object" id="1585">
-                                        <field name="OBJECT">RIGHTFRONT</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <block type="math_number" id="1586">
-                                        <field name="NUM">75</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <statement name="DO0">
-                              <block type="led_select" id="1546" inline="true">
-                                <field name="ACTION">FLASH</field>
-                                <value name="LED">
-                                  <block type="math_number" id="1547">
-                                    <field name="NUM">5</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="movement_reverse" id="1634">
-                                    <next>
-                                      <block type="robot_delay" id="1646" inline="true">
-                                        <value name="DELAY">
-                                          <block type="math_number" id="1647">
-                                            <field name="NUM">200</field>
-                                          </block>
-                                        </value>
-                                        <next>
-                                          <block type="movement_stop" id="1657"></block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </statement>
-                            <statement name="ELSE">
-                              <block type="movement_forward" id="1549"></block>
-                            </statement>
-                            <next>
-                              <block type="movement_stop" id="1756"></block>
-                            </next>
-                          </block>
-                        </next>
                       </block>
                     </next>
                   </block>
