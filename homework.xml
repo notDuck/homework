@@ -39,11 +39,7 @@
                   </block>
                 </value>
                 <next>
-                  <block type="movement_right" id="1456">
-                    <next>
-                      <block type="movement_stop" id="1421"></block>
-                    </next>
-                  </block>
+                  <block type="movement_right" id="1456"></block>
                 </next>
               </block>
             </next>
@@ -82,11 +78,7 @@
                       </block>
                     </value>
                     <next>
-                      <block type="movement_left" id="1476">
-                        <next>
-                          <block type="movement_stop" id="1466"></block>
-                        </next>
-                      </block>
+                      <block type="movement_left" id="1476"></block>
                     </next>
                   </block>
                 </next>
