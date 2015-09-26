@@ -1,5 +1,51 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="multimedia_displaybmp" id="645" x="-71" y="-45">
-    <field name="BMP"></field>
+  <block type="controls_whileUntil" id="714" inline="false" x="2" y="4">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="768">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="801">
+        <next>
+          <block type="oled_setcursor" id="810" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="817">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="818">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawtext" id="839">
+                <field name="TEXT">leftfront=</field>
+                <next>
+                  <block type="oled_drawnumber" id="861" inline="true">
+                    <value name="NUMBER">
+                      <block type="sensor_object" id="992">
+                        <field name="OBJECT">LEFTFRONT</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="robot_delay" id="924" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="999">
+                            <field name="NUM">200</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
   </block>
 </xml>
