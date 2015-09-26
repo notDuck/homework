@@ -158,6 +158,9 @@
                             <statement name="ELSE">
                               <block type="movement_forward" id="1549"></block>
                             </statement>
+                            <next>
+                              <block type="movement_stop" id="1756"></block>
+                            </next>
                           </block>
                         </next>
                       </block>
