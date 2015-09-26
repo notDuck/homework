@@ -16,8 +16,13 @@
           <block type="oled_drawtext" id="69">
             <field name="TEXT">(^_^)</field>
             <next>
-              <block type="oled_drawtext" id="194">
-                <field name="TEXT">just horsing around</field>
+              <block type="oled_linerect" id="216">
+                <field name="OBJECT">RECT</field>
+                <next>
+                  <block type="oled_drawtext" id="194">
+                    <field name="TEXT">just horsing around</field>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
