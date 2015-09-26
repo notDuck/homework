@@ -37,6 +37,43 @@
                             <field name="NUM">200</field>
                           </block>
                         </value>
+                        <next>
+                          <block type="oled_setcursor" id="1000" inline="true">
+                            <value name="STARTX">
+                              <block type="math_number" id="1001">
+                                <field name="NUM">10</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="math_number" id="1002">
+                                <field name="NUM">20</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_drawtext" id="1003">
+                                <field name="TEXT">rightfront=</field>
+                                <next>
+                                  <block type="oled_drawnumber" id="1004" inline="true">
+                                    <value name="NUMBER">
+                                      <block type="sensor_object" id="1005">
+                                        <field name="OBJECT">RIGHTFRONT</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="robot_delay" id="1006" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="1007">
+                                            <field name="NUM">200</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
